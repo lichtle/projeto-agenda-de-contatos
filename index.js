@@ -1,6 +1,7 @@
 let form = document.getElementById("form");
 let corpoTabela = document.getElementById("corpo-tabela");
 
+let numerosTelefone = [];
 let linhas = "";
 
 form.addEventListener("submit", function (event) {
@@ -16,12 +17,18 @@ function adicionarLinha() {
   let numeroContato = document.getElementById("numero-contato");
   let corpoTabela = document.getElementById("corpo-tabela");
 
-  let linha = `<tr>`;
-  linha += `<td>${nomeContato.value}</td>`;
-  linha += `<td>${numeroContato.value}</td>`;
-  linha += "</tr>";
+  if (numerosTelefone.includes(numeroContato.value)) {
+    alert("Este número já está na sua lista!");
+  } else {
+    numerosTelefone.push(numeroContato.value); // Esta função precisa estar dentro do escopo do if, caso contrário o alerta será exibido para qualquer número inserido (pois estará colocando o número no array antes de fazer a validação com o if)
 
-  linhas += linha;
+    let linha = `<tr>`;
+    linha += `<td>${nomeContato.value}</td>`;
+    linha += `<td>${numeroContato.value}</td>`;
+    linha += "</tr>";
 
-  corpoTabela.innerHTML = linhas;
+    linhas += linha;
+
+    corpoTabela.innerHTML = linhas;
+  }
 }
