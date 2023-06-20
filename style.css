@@ -71,7 +71,18 @@ table td {
 }
 
 form button {
-  padding: 12px 30px;
+  background-color: #337aff;
+  padding: 14px 30px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s ease-in-out;
+}
+
+form button:hover {
+  background-color: #337affd7;
 }
 
 table th {
