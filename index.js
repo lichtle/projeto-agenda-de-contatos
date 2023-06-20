@@ -16,6 +16,7 @@ function adicionarLinha() {
   let nomeContato = document.getElementById("nome-contato");
   let numeroContato = document.getElementById("numero-contato");
   let corpoTabela = document.getElementById("corpo-tabela");
+  let aviso = document.getElementById("notice");
 
   if (numerosTelefone.includes(numeroContato.value)) {
     alert("Este número já está na sua lista!");
@@ -30,5 +31,7 @@ function adicionarLinha() {
     linhas += linha;
 
     corpoTabela.innerHTML = linhas;
+
+    aviso.style.display = "none";
   }
 }

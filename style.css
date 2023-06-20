@@ -96,3 +96,8 @@ table td {
   background-color: #fff;
   text-align: center;
 }
+
+#notice {
+  margin-top: 16px;
+  text-align: center;
+}
