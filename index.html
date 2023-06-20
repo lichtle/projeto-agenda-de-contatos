@@ -21,10 +21,20 @@
       </header>
       <!-- Icon: https://www.iconarchive.com/show/cat-commerce-icons-by-iconka/phone-icon.html -->
       <main>
-        <form>
-          <input type="text" placeholder="Nome do contato" required />
-          <input type="number" placeholder="Telefone do contato" required />
-          <button type="submit">Adicionar +</button>
+        <form id="form">
+          <input
+            type="text"
+            placeholder="Nome do contato"
+            required
+            id="nome-contato"
+          />
+          <input
+            type="number"
+            placeholder="Telefone do contato"
+            required
+            id="numero-contato"
+          />
+          <button type="submit" id="send-btn">Adicionar +</button>
         </form>
         <table>
           <thead>
@@ -33,7 +43,7 @@
               <th>Telefone</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="corpo-tabela">
             <tr>
               <td>nome nome nome</td>
               <td>telefone telefone telefone</td>
