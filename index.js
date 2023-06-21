@@ -33,5 +33,8 @@ function adicionarLinha() {
     corpoTabela.innerHTML = linhas;
 
     aviso.style.display = "none";
+
+    nomeContato.value = "";
+    numeroContato.value = "";
   }
 }
