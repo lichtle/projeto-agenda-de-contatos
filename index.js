@@ -8,8 +8,6 @@ form.addEventListener("submit", function (event) {
   event.preventDefault();
 
   adicionarLinha();
-
-  console.log(linhas);
 });
 
 function adicionarLinha() {
